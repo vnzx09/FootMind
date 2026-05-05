@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootMind - Assistente Técnico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FootMind</div>
+    </header>
+
+    <main class="chat-container" id="chat-box">
+        <div class="message bot">
+            <div class="message-content">
+                Olá! Sou o FootMind. O que vamos treinar hoje?
+            </div>
+        </div>
+    </main>
+
+    <footer class="input-area">
+        <div class="input-wrapper">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta tática ou técnica..." autocomplete="off">
+            <button id="send-btn" title="Enviar">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

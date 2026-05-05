@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootMind - Dashboard</title>
+    <!-- Conectando o arquivo de estilos -->
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Foot<span>Mind</span></div>
+        <nav class="nav-links">
+    <a onclick="mudarAba(event, 'sobre')" class="active">Dashboard</a>
+    <a onclick="mudarAba(event, 'como-usar')">Como Usar</a>
+    <!-- O link abaixo agora aponta para o seu arquivo de chat original -->
+    <a href="chat.html">Chat Assist</a>
+</nav>
+        <div class="status">SINC. ATIVA</div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- ABA 1: SOBRE O FOOTMIND -->
+        <section id="sobre" class="tab-section active">
+            <div class="hero-text">
+                <h4>Inteligência Artificial de Performance</h4>
+                <h1>Evolua seu Jogo com <span>Dados Reais</span></h1>
+                <p>O FootMind utiliza inteligência artificial avançada para transformar seu entendimento tático e técnico em campo.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h2>100%</h2>
+                    <p>Foco em Futebol</p>
+                </div>
+                <div class="stat-card">
+                    <h2>IA</h2>
+                    <p>GPT-3.5 Turbo Integrado</p>
+                </div>
+                <div class="stat-card">
+                    <h2>HD</h2>
+                    <p>Tutoriais em Vídeo</p>
+                </div>
+                <div class="stat-card">
+                    <h2>24/7</h2>
+                    <p>Treinador Disponível</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 2: COMO USAR -->
+        <section id="como-usar" class="tab-section">
+            <div class="hero-text">
+                <h4>Instruções</h4>
+                <h1>Metodologia <span>FootMind</span></h1>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>1. Análise Tática</h3>
+                    <p>Pergunte sobre esquemas táticos modernos, como o 4-3-3 de aproximação ou blocos defensivos baixos. A IA detalhará o posicionamento exigido para cada função em campo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>2. Execução Técnica</h3>
+                    <p>Peça o passo a passo de fundamentos. Por exemplo: "Como realizar um passe de ruptura?". O FootMind trará a explicação biomecânica e, automaticamente, um vídeo do YouTube.</p>
+                </div>
+                <div class="info-card">
+                    <h3>3. Contexto Histórico</h3>
+                    <p>Nossa base de dados cobre toda a história do esporte até os dias atuais. Consulte estatísticas, regras oficiais da FIFA e históricos de grandes campeonatos como a Copa de 2022.</p>
+                </div>
+                <div class="info-card">
+                    <h3>4. Regra de Ouro</h3>
+                    <p>Mantenha o foco no jogo! O sistema é programado para bloquear assuntos externos. Isso garante um ambiente focado estritamente na evolução futebolística.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: CHATBOT -->
+        <section id="chat" class="tab-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    Assistente Virtual FootMind
+                </div>
+                <div class="chat-messages" id="chat-box">
+                    <div class="message bot">
+                        <strong>FootMind:</strong> Olá! Sou seu especialista em futebol. Como especialista em futebol, só posso te ajudar com táticas, regras ou história do esporte. Vamos falar de futebol?
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="user-input" class="chat-input" placeholder="Digite sua pergunta tática ou técnica..." onkeypress="handleKeyPress(event)">
+                    <button class="send-btn" onclick="enviarMensagem()">➤</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Conectando o arquivo de scripts no final do body -->
+    <script src="page.js"></script>
+</body>
+</html>
