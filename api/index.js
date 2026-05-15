@@ -3,14 +3,18 @@ const express = require('express');
 const cors = require('cors');
 const { OpenAI } = require('openai');
 const axios = require('axios');
-
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
 // 1. Configurações (Middlewares)
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '../public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
 // 2. Inicialização da OpenAI
 const openai = new OpenAI({
@@ -147,7 +151,6 @@ async function getYouTubeVideo(query) {
     return null;
 }
 
-app.use(express.static('public'));
 
 
 // 5. Rota do Chatbot
