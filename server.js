@@ -190,6 +190,18 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 
+const express = require("express")
+const app = express()
+
+app.get("/", (req, res) => {
+    res.send("Servidor do FootMind está online! ⚽")
+})
+
+app.listen(3000, () => {
+    console.log("servidor rodando")
+})
+
+
 // 6. Inicialização do Servidor
 app.listen(port, () => {
     console.log(`⚽ FootMind online na porta ${port}`);
