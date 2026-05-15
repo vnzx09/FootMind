@@ -37,7 +37,7 @@ async function sendMessage() {
     const typingMessage = chatBox.lastChild;
 
     try {
-        const response = await fetch('/api/chat', {
+        const response = await fetch("https://foot-mind.vercel.app/api/chat", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
