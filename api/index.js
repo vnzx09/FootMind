@@ -147,9 +147,8 @@ async function getYouTubeVideo(query) {
     return null;
 }
 
-app.get("/", (req, res) => {
-   res.send("FootMind API online ⚽");
-});
+app.use(express.static('public'));
+
 
 // 5. Rota do Chatbot
 app.post('/api/chat', async (req, res) => {
